@@ -2,7 +2,7 @@
 
 // // formas de declarar una variable
 
-// var primerNombre = "Nicolas"; //la forma var ya no se utiliza
+// // var primerNombre = "Nicolas"; //la forma var ya no se utiliza
 // let apellido = "Kenny";
 // const Sexo = "Masculino";
 
