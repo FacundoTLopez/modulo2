@@ -67,7 +67,7 @@
 // getValueAfterMS(1250).then((res) => console.log(res));
 
 /** ¿Que es una API?, es un cojunto de funcionalidades que podemos usar dentro de nuestra aplicacion, pueden ser publicas(pokeapi) */
-/** ¿Como funciona una API?, permite acceder mas facilmente a una base de datos */
+/** ¿Como funciona una API?, permite acceder mas facilmente a una base de datos aa*/
 
 const getPokemon = async () => {
   try {
