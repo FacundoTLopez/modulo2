@@ -64,7 +64,7 @@ const ProcesarPizza = async (e) => {
   try {
     const nombre = document.createElement("h2");
     const textoNombre = document.createTextNode(
-      `esta Piiza es la ${Pizza.nombre}`
+      `Esta Pizza es la ${Pizza.nombre}`
     );
     nombre.appendChild(textoNombre);
 
