@@ -4,7 +4,7 @@ const PIZZAS = [
     nombre: "Muzzarella",
     ingredientes: ["Salsa", "Muzzarella", "Oregano"],
     precio: 300,
-    imagen: "./img/Muzzarella.jpg",
+    imagen: "./Img/Muzzarella.jpg",
   },
   {
     ID: 2,
