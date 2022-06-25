@@ -9,7 +9,7 @@ const PIZZAS = [
   {
     ID: 2,
     nombre: "Especial",
-    ingredientes: ["Salsa", "Queso", "Jamon", "Morrones"],
+    ingredientes: ["Salsa", "Queso", "Jamon", "Morrones", "Aceitunas"],
     precio: 650,
     imagen: "./Img/Especial.jpg",
   },
