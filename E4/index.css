@@ -1,0 +1,44 @@
+body{
+    background-color: #630404;
+
+}
+img{
+    width: 40%;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#card{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 1px;
+    border-radius: 10px;
+    height: 50%;
+    width: 35%;
+    background-color: white;
+    color: black;
+    box-shadow: rgba(0,0,0,1);
+}
+
+ul:before{
+    content:attr(aria-label);
+    font-size:120%;
+    font-weight:bold;
+    margin-left:-15px;
+}
+
+form{
+    margin-top: 10px;
+}
+
+h1{
+    color: white;
+}
