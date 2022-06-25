@@ -2,7 +2,7 @@ const PIZZAS = [
   {
     ID: 1,
     nombre: "Muzzarella",
-    ingredientes: ["Salsa", "Muzzarella", "Oregano"],
+    ingredientes: ["Salsa", "Muzzarella", "Oregano", "Aceitunas"],
     precio: 300,
     imagen: "./Img/Muzzarella.jpg",
   },
@@ -48,11 +48,12 @@ localStorage.setItem("Pizzas", JSON.stringify(PIZZAS));
 const input = document.querySelector("input");
 const button = document.querySelector("button");
 const card = document.getElementById("card");
-const cardP = document.createElement("h2")
-const cardPText = document.createTextNode("Ingresa el ID de la Pizza que queres");
-cardP.appendChild(cardPText)
+const cardP = document.createElement("h2");
+const cardPText = document.createTextNode(
+  "Ingresa el ID de la Pizza que queres"
+);
+cardP.appendChild(cardPText);
 card.appendChild(cardP);
-
 
 const ProcesarPizza = async (e) => {
   card.innerHTML = "";
