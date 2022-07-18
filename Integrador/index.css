@@ -1,37 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap");
 body {
+  margin: 0;
   height: 100vh;
 }
 
+header {
+  height: 8%;
+  border-bottom: 1px solid black;
+}
 nav {
-  border-bottom: solid 1px black;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+#page-img {
+  height: 100%;
+  width: 15%;
+  border-right: 1px solid black;
+}
+#page-logo {
+  width: 100%;
+}
+#page-name {
+  height: 100%;
+  width: 20%;
+  border-right: 1px solid black;
+}
+#page-title {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: "Cormorant SC", serif;
+}
+#nav-options {
+  height: 100%;
+  width: 50%;
+}
+#nav-options-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  justify-content: space-evenly;
+  list-style-type: none;
 }
 
-main{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 90%;
+#container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+#first-section {
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid black;
+}
+#add-game-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-input {
+  width: 70%;
+}
+#radio-input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+#game-add-button {
+  width: 70%;
+}
+#second-section {
+  width: 80%;
+  height: 100%;
 }
 
-#sideBar{
-    width: 18%;
-    border-right: solid 1px black;
-}
-
-#cardsSection{
-    display: flex;
-    flex-direction: row;
-    width: 82%;
-}
-
-footer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-top: solid 1px black;
-    height: 10%;
-}
-
-footer p{
-    margin: 0;
+#footer {
+  height: 8%;
+  border-top: solid 1px black;
 }
