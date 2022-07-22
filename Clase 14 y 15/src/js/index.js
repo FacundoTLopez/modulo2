@@ -70,7 +70,7 @@ class Cart {
     const ProductDb = database.products.find((p) => p.ID === ID);
     if (!Product) {
       return alert(
-        "Che master, el producto que estas intentando sacar no esta en tu carrito",
+        "Che master, el producto que estas intentando sacar no esta en tu carrito"
       );
     }
     ProductDb.stock++;
@@ -93,7 +93,7 @@ class Cart {
     this.products = [];
     this.subtotal = 0;
 
-    localStorage.removeItem('cart');
+    localStorage.removeItem("cart");
     RenderizarCarrito(this);
     location.reload();
   }

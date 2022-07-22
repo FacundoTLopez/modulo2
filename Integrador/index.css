@@ -78,6 +78,42 @@ nav {
   height: 100%;
 }
 
+#logInForm {
+  margin: 100px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 50%;
+  width: 70%;
+  box-shadow: 7px 7px 7px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 7px 7px 7px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 7px 7px 7px 1px rgba(0, 0, 0, 0.5);
+  background-image: url("src/img/formBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%	;
+}
+#formInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+}
+h4 {
+  margin: 0;
+}
+#imageDiv {
+  width: 70%;
+}
+#divImage {
+  width: 90%;
+}
+
 #footer {
   height: 8%;
   border-top: solid 1px black;
