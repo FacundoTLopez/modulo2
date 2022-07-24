@@ -9,12 +9,19 @@ class Userdb {
   }
 }
 
-const userDbExistente = localStorage.getItem("database");
+class Users {
+  constructor({ username, password }) {
+    (this.username = username), (this.password = password);
+  }
+}
+
+const userDbExistente = localStorage.getItem("userdatabase");
 
 const userDatabase = userDbExistente
-  ? new Userdb(JSON.parse(dbExistente))
+  ? new Userdb(JSON.parse(userDbExistente))
   : new Userdb({});
 
-if (!userDbExistente) {
-  userDatabase.addProduct(Pikachu, Charmander, Charizard);
-}
+// if (!userDbExistente) {
+//   userDatabase.addProduct(Pikachu, Charmander, Charizard);
+// }
+  

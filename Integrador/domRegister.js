@@ -3,32 +3,16 @@ const newPasswordInput = document.querySelector("#passwordInput");
 const button = document.querySelector("#submitButton");
 
 submitButton.addEventListener("click", (e) => {
-  const checkUsers = JSON.parse(localStorage.getItem("Users"));
-  const user = {
-    user: newUserInput.value,
-    pass: newPasswordInput.value,
-  };
-  if (registeredUsers.length > 0) {
-    checkUsers.forEach((p) => {
-      if (user.user == p.userName) {
-        alert("Ese nombre de usuario ya existe");
-      } else {
-        const newUser = {
-          userName: newUserInput.value,
-          password: newPasswordInput.value,
-        };
-        addUser(newUser);
-        alert("Bienvenido!");
-        window.location.replace("home.html");
-      }
-    });
+  const user = new Users({
+    username: newUserInput.value,
+    password: newPasswordInput.value,
+  });
+  const findUser = userDatabase.users.find((p) => p.username === user.username);
+  if (findUser) {
+    alert("Ese nombre de usuario ya existe");
   } else {
-    const newUser = {
-      userName: newUserInput.value,
-      password: newPasswordInput.value,
-    };
-    addUser(newUser);
-    alert("Bienvenido!");
-    window.location.replace("home.html");
+    userDatabase.addUser(user);
+    alert("Ahora estas registrado, por favor inicia sesion");
+    window.location.replace("index.html");
   }
 });
