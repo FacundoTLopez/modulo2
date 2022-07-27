@@ -26,25 +26,62 @@
     </header>
     <main id="container">
       <aside id="first-section">
-        <form id="add-game-form" action="">
-          <p>New game? add it to te page from here!</p>
-          <label for="game-name">Name:</label>
+        <div id="add-game-form" action="">
+          <p>Hay un juego nuevo? Agregalo desde aqui!</p>
+          <label for="game-name">Nombre:</label>
           <input type="text" class="text-input" name="game-name" id="" />
-          <p>Is it a dlc?</p>
+          <p>Es un dlc?</p>
           <div id="radio-input-container">
-            <label for="dlc-or-not">Yes</label>
-            <input type="radio" name="dlc-or-not" value="true" id="" />
+            <label for="dlc-or-not">Si</label>
+            <input type="radio" name="dlc-or-not" value="true" id="" class="formRadio"/>
             <label for="dlc-or-not">No</label>
-            <input type="radio" name="dlc-or-not" value="false" id="" />
+            <input type="radio" name="dlc-or-not" value="false" id="" class="formRadio"/>
           </div>
-          <p>If it is, from wich game?</p>
+          <p>Si lo es, de que juego?</p>
           <input type="text" class="text-input" />
-          <p>No image option! i'll do that later...</p>
-          <button id="game-add-button">Add</button>
-        </form>
+          <p>Ingresa aqui el link a la pagina de la tienda</p>
+          <input type="text" class="text-input">
+          <p>Y aqui puedes pegar el path de una imagen (de internet)</p>
+          <input type="text" class="text-input">
+          <button id="game-add-button">Agregar</button>
+        </div>
       </aside>
-      <section id="second-section"></section>
+      <section id="second-section">
+        <div id="first-subsection">
+          <div id="mensajito">
+            <h1>Dragon age: all games and dlc's</h1>
+            <p>
+              Aqui encontraras todos los juegos de la saga dragon age
+              registrados con sus nombres y su dlc principal
+            </p>
+          </div>
+          <div id="cards-filter">
+            <p>Usa estos filtros para encontrar un juego especifico!</p>
+            <div id="filters-div">
+              <label for="name-selector">DLC</label>
+              <select name="name-selector" id="dlc-selector">
+                <option value="disabled" disabled selected hidden>
+                  Dlc selector
+                </option>
+                <option value="awakening">The Awakening</option>
+                <option value="golems-of-amgarrak">Golems of Amgarrak</option>
+                <option value="witch-hunt">Witch Hunt</option>
+                <option value="Legacy">Legacy</option>
+                <option value="mark-of-the-assassin">
+                  Mark of the Assassin
+                </option>
+                <option value="trespasser">Trespasser</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="second-subsection">
+          
+        </div>
+      </section>
     </main>
     <footer id="footer"></footer>
   </body>
+  <script src="./index.js"></script>
+  <script src="./domHome.js"></script>
 </html>
