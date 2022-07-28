@@ -146,6 +146,7 @@ nav {
   width: 90%;
   height: 80%;
   padding: 5px;
+  overflow: scroll;
 }
 
 #logInForm {
@@ -182,9 +183,4 @@ h4 {
 }
 #divImage {
   width: 90%;
-}
-
-#footer {
-  height: 8%;
-  border-top: solid 1px black;
 }

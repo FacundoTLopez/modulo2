@@ -48,7 +48,7 @@ const CardsDatabase = CardsDbExistente
 const DAOrigins = new Games({
   img: "src/img/DAO-cover.jpg",
   name: "Dragon Age: Origins",
-  dlc: ["The awakening", "Golems Of Amgarrak", "Witch Hunt"],
+  dlc: ["The Awakening", "Golems Of Amgarrak", "Witch Hunt"],
   link: "https://www.origin.com/arg/es-es/store/dragon-age/dragon-age-origins",
 });
 const DA2 = new Games({
