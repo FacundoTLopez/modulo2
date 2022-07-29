@@ -114,6 +114,6 @@ filterForm.addEventListener("submit", (e) => {
 });
 
 cleanFilter.addEventListener("click", () => {
-  cardContainer.innerHTML="",
-  loadCompleteList()
+  (cardContainer.innerHTML = ""), (filterName.value = "");
+  loadCompleteList();
 });
