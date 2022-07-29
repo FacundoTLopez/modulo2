@@ -56,9 +56,27 @@ const loadCompleteList = () => {
   });
 };
 
-form.addEventListener("submit", loadCompleteList());
+form.addEventListener("submit", (e) => {
+  const card = CardsDatabase.cards.find((p) => p.name === formNameInput.value);
 
-document.addEventListener("DOMContentLoaded", () => {});
+  if (card) {
+    if (card.name === formNameInput.value) {
+      alert("Ese juego ya esta en esta lista");
+    }
+  } else if (formNameInput.value.includes("Dragon Age:")) {
+    const newGame = new Games({
+      img: imagePath.value,
+      name: formNameInput.value,
+      link: linkToStore.value,
+    });
+    CardsDatabase.addCard(newGame);
+  } else {
+    e.preventDefault();
+    alert("Ingresa un nombre valido");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => loadCompleteList());
 
 filterForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -114,6 +132,7 @@ filterForm.addEventListener("submit", (e) => {
 });
 
 cleanFilter.addEventListener("click", () => {
-  (cardContainer.innerHTML = ""), (filterName.value = "");
-  loadCompleteList();
+  cardContainer.innerHTML="",
+  filterName.value="";
+  loadCompleteList()
 });
