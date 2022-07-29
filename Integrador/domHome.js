@@ -7,28 +7,9 @@ const Button = document.querySelector("#game-add-button");
 const form = document.querySelector("#add-game-form");
 const filterForm = document.querySelector("#filter-form");
 const filterName = document.querySelector("#input-name-filter");
+const cleanFilter = document.querySelector("#clean-filter");
 
-form.addEventListener("submit", (e) => {
-  const card = CardsDatabase.cards.find((p) => p.name === formNameInput.value);
-
-  if (card) {
-    if (card.name === formNameInput.value) {
-      alert("Ese juego ya esta en esta lista");
-    }
-  } else if (formNameInput.value.includes("Dragon Age:")) {
-    const newGame = new Games({
-      img: imagePath.value,
-      name: formNameInput.value,
-      link: linkToStore.value,
-    });
-    CardsDatabase.addCard(newGame);
-  } else {
-    e.preventDefault();
-    alert("Ingresa un nombre valido");
-  }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
+const loadCompleteList = () => {
   CardsDatabase.cards.map((p) => {
     const card = document.createElement("div");
     card.classList.add("card");
@@ -73,15 +54,19 @@ document.addEventListener("DOMContentLoaded", () => {
     card.appendChild(linkDiv);
     cardContainer.appendChild(card);
   });
-});
+};
+
+form.addEventListener("submit", loadCompleteList());
+
+document.addEventListener("DOMContentLoaded", () => {});
 
 filterForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const filteredCard = CardsDatabase.cards.find(
     (p) => p.name === filterName.value
   );
-  if(filteredCard){
-    cardContainer.innerHTML="";
+  if (filteredCard) {
+    cardContainer.innerHTML = "";
 
     const card = document.createElement("div");
     card.classList.add("card");
@@ -126,4 +111,9 @@ filterForm.addEventListener("submit", (e) => {
     card.appendChild(linkDiv);
     cardContainer.appendChild(card);
   }
+});
+
+cleanFilter.addEventListener("click", () => {
+  cardContainer.innerHTML="",
+  loadCompleteList()
 });
